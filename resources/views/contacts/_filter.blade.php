@@ -4,11 +4,9 @@
         <div class="row">
             <div class="col">
                 <select id="filter_company_id" name="company_id" class="custom-select">
-                    @if ($companies->count())
-                        @foreach ($companies as $id => $name)
+                    @foreach ($companies as $id => $name)
                         <option {{$id == request('company_id') ? 'selected' : ''}} value="{{ $id }}">{{ $name }}</option>
-                        @endforeach
-                    @endif
+                    @endforeach
                 </select>
             </div>
             <div class="col">
